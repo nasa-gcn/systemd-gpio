@@ -1,0 +1,10 @@
+#! /usr/bin/make -f
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_installsystemd:
+	dh_installsystemd --name=gpio@
+
+execute_before_dh_installman:
+	pandoc -f rst -s -t man README.rst -o debian/systemd-gpio.5

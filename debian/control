@@ -1,0 +1,27 @@
+Source: python-systemd-gpio
+Maintainer: Leo Singer <leo.singer@ligo.org>
+Section: python
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               pandoc,
+               pybuild-plugin-pyproject,
+               python3-all,
+               python3-click,
+               python3-gpiozero,
+               python3-setuptools
+Standards-Version: 4.6.2
+Homepage: https://github.com/nasa-gcn/systemd-gpio
+Rules-Requires-Root: no
+X-Python3-Version: >= 3.8
+
+Package: python3-systemd-gpio
+Architecture: all
+Multi-Arch: foreign
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: Run commands when a GPIO button is pressed.
+ Use systemd to configure commands to run when a button on a GPIO pin is
+ pressed, released, or held.
+ .
+ This package installs the library, scripts, and systemd service template for
+ Python 3.
