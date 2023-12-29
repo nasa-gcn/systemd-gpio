@@ -1,3 +1,5 @@
+[![PyPI](https://img.shields.io/pypi/v/systemd-gpio)](https://pypi.org/project/systemd-gpio/)
+
 # systemd-gpio
 
 Use systemd to configure commands to run when a GPIO button is pressed on a Raspberry Pi.
