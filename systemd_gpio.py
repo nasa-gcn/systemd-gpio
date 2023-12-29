@@ -9,7 +9,7 @@ import signal
 
 @click.command(context_settings=dict(auto_envvar_prefix="GPIO"))
 @click.option("--pin", type=int, required=True)
-@click.option("--pull-up", type=bool)
+@click.option("--pull-up", type=bool, default=True)
 @click.option("--active-state", type=bool)
 @click.option("--bounce-time", type=float)
 @click.option("--hold-time", type=float, default=1)
