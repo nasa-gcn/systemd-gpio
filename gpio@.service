@@ -2,7 +2,7 @@
 Description=Run commands when a button on GPIO%i is pressed, released, or held
 
 [Service]
-ExecStart=/usr/local/bin/systemd-gpio
+ExecStart=/usr/bin/systemd-gpio
 Environment=GPIO_PIN=%i
 EnvironmentFile=/etc/gpio/%i
 
