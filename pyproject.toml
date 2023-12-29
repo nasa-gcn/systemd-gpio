@@ -26,3 +26,6 @@ dynamic = ["version"]
 
 [project.scripts]
 systemd-gpio = "systemd_gpio:main"
+
+[tool.setuptools]
+py-modules = ["systemd_gpio"]
