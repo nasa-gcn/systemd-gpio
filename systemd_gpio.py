@@ -18,7 +18,7 @@ import signal
 @click.option("--when-pressed", type=str)
 @click.option("--when-released", type=str)
 def main(**kwargs):
-    """Run commands when a button on GPIO%i is pressed, released, or held.
+    """Run commands when a button on a GPIO pin is pressed, released, or held.
 
     Any of the options may be provided using either a command line argument or
     an environment variable whose name starts with the prefix GPIO_. For
