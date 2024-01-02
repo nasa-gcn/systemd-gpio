@@ -8,6 +8,7 @@ import signal
 
 
 @click.command(context_settings=dict(auto_envvar_prefix="GPIO"))
+@click.version_option()
 @click.option("--pin", type=int, required=True)
 @click.option("--pull-up", type=bool, default=True)
 @click.option("--active-state", type=bool)
