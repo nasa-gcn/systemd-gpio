@@ -5,6 +5,12 @@ import functools
 import os
 import shlex
 import signal
+import sys
+
+
+def run(message, args):
+    print(message, file=sys.stderr)
+    os.spawnvp(os.P_NOWAIT, args[0], args)
 
 
 @click.command(context_settings=dict(auto_envvar_prefix="GPIO"))
@@ -39,7 +45,7 @@ def main(**kwargs):
     button = gpiozero.Button(**kwargs)
     for key, command in handlers.items():
         if command and (args := shlex.split(command)):
-            handler = functools.partial(os.spawnvp, os.P_NOWAIT, args[0], args)
+            handler = functools.partial(run, f"{key}: {command}", args)
             setattr(button, key, handler)
     signal.pause()
 
