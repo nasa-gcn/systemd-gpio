@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8  # v5.0.0
 
-      - uses: psf/black@8a737e727ac5ab2f1d4cf5876720ed276dc8dc4b  # 25.1.0
+      - uses: psf/black@05f0a8ce1f71fbb36e1e032d3b518c7b945089a2  # 25.11.0
