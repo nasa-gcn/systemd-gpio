@@ -1,11 +1,11 @@
-import click
-import gpiozero
-
 import functools
 import os
 import shlex
 import signal
 import sys
+
+import click
+import gpiozero
 
 
 def run(message, args):
